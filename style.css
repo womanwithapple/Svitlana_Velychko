@@ -676,7 +676,7 @@ button {
     z-index: 1;
     background-size: contain; /* Зберігає пропорції зображення */
     background-repeat: no-repeat; /* Забороняємо повторення */
-    background-image: url('Graphics/deco.png'); 
+    background-image: url('/Graphics/deco.png'); 
 }
 
 /* Верхній лівий елемент */
