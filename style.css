@@ -1684,21 +1684,7 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 }
 
 @media (max-width: 600px) {
-    .icon-decor {
-        display: none;
-    }
-
-    .skill-box {
-        min-width: 440px;
-    }
-
-    .skill-image {
-        max-width: 200px;
-    }
-}
-
-@media (max-width: 480px) {
-    #header {
+     #header {
     display: flex;
     flex-direction: column;
     }
@@ -1708,6 +1694,22 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
         font-size: 0.88rem; 
         margin-top: 16px;
     }
+    
+    .icon-decor {
+        display: none;
+    }
+
+    .skill-box {
+        min-width: 440px;
+    }
+
+    .skill-image {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+   
     .experience-journey {
         padding: 40px 12px;
     }
@@ -1718,12 +1720,5 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
     }
     .hobbies-gallery-row {
         justify-content: center;
-    }
-
-    .skill-box {
-        min-width: 440px;
-    }
-    .skill-image {
-        display: none;
     }
 }
