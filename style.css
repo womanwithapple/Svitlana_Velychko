@@ -1698,7 +1698,7 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 }
 
 @media (max-width: 480px) {
-    .header {
+    #header {
     display: flex;
     flex-direction: column;
     }
@@ -1714,27 +1714,16 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 
     .experience-journey .decorative-top-left,
     .experience-journey .decorative-bottom-right {
-        height: 15vw;
-        width: 18vw;
-    }
-
-    .experience-journey .decorative-top-left {
-        margin-top: 12vw;
-        margin-left: 6vw;
-    }
-
-    .experience-journey .decorative-bottom-right {
-        margin-bottom: 12vw;
-        margin-right: 6vw;
+        display: none;
     }
     .hobbies-gallery-row {
         justify-content: center;
     }
 
     .skill-box {
-        min-width: 300px;
+        min-width: 440px;
     }
     .skill-image {
-        max-width: 120px;
+        display: none;
     }
 }
