@@ -232,7 +232,7 @@ header, footer {
     border-radius: 50px; 
     cursor: pointer;
     text-decoration: none;
-    var(--background-color-normal-mode)-space: nowrap;
+    white-space: nowrap;
     gap: 14px;
     transition: all 0.3s ease;
 }
@@ -518,7 +518,7 @@ input {
     cursor: pointer;
     text-decoration: none;
     gap: 14px;
-    var(--background-color-normal-mode)-space: nowrap; /* Запобігає переносу тексту */
+    white-space: nowrap; 
     transition: all 0.3s ease;
 }
 
