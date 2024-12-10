@@ -1127,7 +1127,7 @@ button {
     height: 100%;
     border-radius: 16px;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.6s ease-in-out;
 }
 
 .overlay {
@@ -1145,7 +1145,7 @@ button {
     text-align: center;
     padding: 16px;
     box-sizing: border-box;
-    transition: bottom 0.5s ease-in;
+    transition: bottom 0.8s ease-in-out;
 }
 
 .hobbies-image-container:hover .overlay {
@@ -1760,4 +1760,86 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
         font-size: 0.8rem;
         hyphens: auto;
     }
+}
+
+@keyframes slide-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(100px); /* Початкове положення знизу */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Кінцеве положення */
+    }
+}
+
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-100px); /* Початкове положення зліва */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Кінцеве положення */
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(100px); /* Початкове положення зліва */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Кінцеве положення */
+    }
+}
+
+.hero-photo {
+    opacity: 0; /* Сховати до анімації */
+    transform: translateX(-100px); /* Початкове положення */
+    animation: slide-in-left 2s ease-in-out 1 forwards; /* Анімація для фото */
+}
+
+.about-me-photo {
+    opacity: 0; /* Сховати до анімації */
+    transform: translateX(100px); /* Початкове положення */
+    animation: slide-in-right 2s ease-in-out 1 forwards; /* Анімація для фото */
+}
+
+.hero-text h2,
+.hero-text h1,
+.hero-text .btn,
+.about-me-text h3,
+.about-me-text h2,
+.about-me-text p,
+.about-me-text .btn {
+    opacity: 0; /* Сховати до анімації */
+    transform: translateY(100px); /* Початкове положення */
+    animation: slide-in-up 2s ease-in-out 1 forwards; /* Анімація для тексту */
+}
+
+.hero-text h2 {
+    animation-delay: 0s; /* Затримка для першого елемента */
+}
+
+.hero-text h1 {
+    animation-delay: 0.3s; /* Затримка для другого елемента */
+}
+
+.hero-text .btn {
+    animation-delay: 0.6s; /* Затримка для кнопки */
+}
+
+.about-me-text h3 {
+    animation-delay: 0s;
+}
+.about-me-text h2 {
+    animation-delay: 0.3s;
+}
+.about-me-text p {
+    animation-delay: 0.6s;
+}
+.about-me-text .btn {
+    animation-delay: 0.9s;
 }
