@@ -1756,7 +1756,9 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
     .skill-back li {
         margin-bottom: 8px;
     }
-    .tool h5 {
+    
+    .tool h5,
+    .area h5 {
         font-size: 0.8rem;
         hyphens: auto;
     }
