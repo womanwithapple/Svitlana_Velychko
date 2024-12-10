@@ -1698,9 +1698,15 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 }
 
 @media (max-width: 480px) {
+    .header {
+    display: flex;
+    flex-direction: column;
+    }
+
     .btn_header {
-        padding: 20px 20px; /* Зменшення розміру кнопки */
-        font-size: 0.88rem; /* Зменшення шрифту */
+        padding: 20px 20px;
+        font-size: 0.88rem; 
+        margin-top: 16px;
     }
     .experience-journey {
         padding: 40px 12px;
@@ -1725,7 +1731,10 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
         justify-content: center;
     }
 
+    .skill-box {
+        min-width: 300px;
+    }
     .skill-image {
-        max-width: 140px;
+        max-width: 120px;
     }
 }
