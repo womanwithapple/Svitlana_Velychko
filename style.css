@@ -193,7 +193,7 @@ header, footer {
     display: flex;
     list-style: none;
     gap: clamp(20px, 5vw, 46px); /* Зміна відстані залежно від ширини екрану */
-    transition: gap 0.3s ease; /* Гладка зміна */
+    transition: gap 0.3s ease; 
 }
 
 .header-nav ul li a {
@@ -228,7 +228,7 @@ header, footer {
 }
 
 .btn_header:hover, .btn_header:active {
-    background-color: #86ba0d; /* Темніший відтінок */
+    background-color: #86ba0d; 
     color: #F9F7F5;
     text-decoration: none;
     transform: scale(1.05);
@@ -327,7 +327,7 @@ footer {
 }
 
 .hero-text {
-    text-align: left; /* Вирівнювання тексту по лівому краю */
+    text-align: left;
     padding-bottom: 40px;
 }
 
@@ -384,7 +384,7 @@ footer {
 
 .contact-content {
     display: flex;
-    gap: 64px; /* Відстань між контактною інформацією та формою */
+    gap: 64px; 
     justify-content: space-between;
     align-items: flex-start;
 }
@@ -527,7 +527,7 @@ button {
   transition: all 0.4s ease;
 }
 
-/* Загальні стилі */
+
 .hero-about-me {
     text-align: center;
     position: relative;
@@ -561,7 +561,7 @@ button {
     justify-content: center;
 }
 
-/* Заголовки та текст */
+
 .hero-about-me h2 {
     margin-bottom: 24px;
     color: #22272D;
@@ -581,9 +581,9 @@ button {
 }
 
 .experience-details {
-    background-color: #22272D; /* Чорний фон */
-    color: #F9F7F5; /* Білий текст */
-    padding: 114px 20px 106px; /* Відступи від верху і низу */
+    background-color: #22272D; 
+    color: #F9F7F5; 
+    padding: 114px 20px 106px; 
     text-align: center;
     max-width: 1060px;
     margin: 0px auto 114px;
@@ -603,12 +603,12 @@ button {
 
 .experience-details p.date-location {
     font-size: 1rem;
-    color: #9BDA09; /* Зелений колір */
+    color: #9BDA09; 
     margin-top: 24px;
 }
 
 .experience-details ul {
-    list-style-type: disc; /* Точки на початку пунктів */
+    list-style-type: disc; 
     text-align: left;
     margin: 24px auto;
     padding-left: 40px;
@@ -623,12 +623,12 @@ button {
 }
 
 .experience-journey {
-    background-color: #22272D; /* Чорний фон */
-    color: #F9F7F5; /* Білий текст */
-    padding: 114px 20px 106px; /* Відступи від верху і низу */
+    background-color: #22272D; 
+    color: #F9F7F5; 
+    padding: 114px 20px 106px; 
     text-align: center;
     border-radius: 24px;
-    max-width: 1060px; /* Максимальна ширина */
+    max-width: 1060px;
     width: 100%;
     margin: 114px auto 114px;
     position: relative;
@@ -636,9 +636,9 @@ button {
 }
 
 .passion {
-    list-style: none; /* Прибираємо крапки для першого списку */
+    list-style: none; 
     padding: 0 40px;
-    margin: 0 0 72px; /* Відступ після першого списку до наступного H2 */
+    margin: 0 0 72px; 
 }
 
 .passion li {
@@ -659,7 +659,7 @@ button {
 }
 
 .experience-journey h4 {
-    margin-bottom: 52px; /* Відступ від h4 до h2 */
+    margin-bottom: 52px; 
     color: #F9F7F5;
 }
 
@@ -676,7 +676,7 @@ button {
     z-index: 1;
     background-size: contain; /* Зберігає пропорції зображення */
     background-repeat: no-repeat; /* Забороняємо повторення */
-    background-image: url('/Graphics/deco.png'); 
+    background-image: url('Graphics/deco.png'); 
 }
 
 /* Верхній лівий елемент */
@@ -735,7 +735,7 @@ button {
     align-items: center;
     gap: 38px;
     width: 100%;
-    margin-bottom: 38px; /* Відступ між іконкою та текстом і параграфом */
+    margin-bottom: 38px; 
 }
 
 .education-icon {
@@ -851,7 +851,6 @@ button {
     transform: rotateY(0deg);
 }
 
-/* Іконка */
 .skill-icon {
     width: 64px; 
     height: 64px; 
@@ -879,8 +878,8 @@ button {
 }
 
 .skill-back .skill-icon {
-    width: 64px; /* Розмір іконки */
-    height: 64px; /* Висота іконки */
+    width: 64px; 
+    height: 64px; 
     flex-shrink: 0; /* Забороняє змінювати розмір іконки */
 }
 
@@ -894,7 +893,7 @@ button {
 
 .skill-back ul {
     margin-top: 24px;
-    padding-left: 32px; /* Відступ для списку */
+    padding-left: 32px; 
     text-align: left;
 }
 
@@ -937,7 +936,7 @@ button {
     justify-content: center; /* Центрування елементів по горизонталі */
     align-items: center; /* Центрування елементів по вертикалі */
     flex-wrap: wrap; /* Дозволяємо елементам переноситись */
-    gap: 32px; /* Відстань між елементами */
+    gap: 32px; 
 }
 
 .clients-grid a {
@@ -1028,8 +1027,8 @@ button {
     height: 60px;
     border: 1px solid #9BDA09;
     display: flex;
-    align-items: center; /* Центрування іконки всередині кнопки */
-    justify-content: center; /* Центрування іконки всередині кнопки */
+    align-items: center; 
+    justify-content: center; 
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 16px;
@@ -1105,19 +1104,19 @@ button {
 
 .hobbies-gallery-row {
     display: flex;
-    flex-wrap: wrap; /* Додаємо можливість переносу рядків */
-    justify-content: center; /* Центруємо контент */
-    gap: 4px; /* Зазор між картинками */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 4px; 
     max-width: 100%;
 }
 
 .hobbies-image-container {
     position: relative;
-    width: 208px; /* Фіксована ширина */
-    height: 208px; /* Фіксована висота */
+    width: 208px; 
+    height: 208px; 
     border-radius: 16px;
     overflow: hidden;
-    flex-shrink: 0; /* Забороняємо зменшення елементів */
+    flex-shrink: 0;
     scroll-snap-align: start;
 }
 
@@ -1268,8 +1267,6 @@ button {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.025);
 }
 
-
-/* Іконки */
 .icon-decor {
     display: flex;
     align-items: center;
@@ -1366,9 +1363,9 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 
 @font-face {
     font-family: 'Mariupol';
-    src: url('/Mariupol/mariupol-regular-webfont.woff2') format('woff2'),
-         url('/Mariupol/mariupol-regular-webfont.woff') format('woff'),
-         url('/Mariupol/Mariupol-Regular.ttf') format('truetype');
+    src: url('Mariupol/mariupol-regular-webfont.woff2') format('woff2'),
+         url('Mariupol/mariupol-regular-webfont.woff') format('woff'),
+         url('Mariupol/Mariupol-Regular.ttf') format('truetype');
 }
 
 @media (max-width: 1280px) {
@@ -1376,16 +1373,16 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
         gap: 46px;
     }
     .experience-details {
-        padding: 114px 20px 106px 20px; /* Додаємо відступи по боках */
-        max-width: calc(100% - 40px); /* Зменшуємо max-width, щоб залишити відступи */
+        padding: 114px 20px 106px 20px; 
+        max-width: calc(100% - 40px);
     }
 }
 
 @media (min-width: 1280px) {
     .experience-journey .decorative-top-left,
     .experience-journey .decorative-bottom-right {
-        height: 75px; /* Фіксована висота */
-        width: 97px; /* Фіксована ширина */
+        height: 75px; 
+        width: 97px;
     }
 
     .experience-journey .decorative-top-left {
@@ -1421,7 +1418,7 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
         margin-bottom: 32px;
     }
     .hero-text h2 .highlight {
-        margin-top: 8px; /* Додаємо відступ між рядками */
+        margin-top: 8px; 
     }
     .experience-journey {
         padding: 80px 20px;
@@ -1479,20 +1476,20 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
         margin-bottom: 16px;
     }
     .hero-text h2 .highlight {
-        margin-top: 8px; /* Додаємо відступ між рядками */
+        margin-top: 8px; 
     }
 
     .footer-nav {
-        gap: 32px; /* Зменшуємо відстань між навігаційними посиланнями */
+        gap: 32px; 
     }
 
     .footer-line {
-        width: 100%; /* Лінія займає всю ширину */
-        max-width: 600px; /* Максимальна ширина для великих екранів */
+        width: 100%; 
+        max-width: 600px; 
     }
 
     .footer-info {
-        gap: 80px; /* Зменшуємо відстань між колонками інформації */
+        gap: 80px; 
     }
 
     .about-me-content {
@@ -1505,7 +1502,7 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
         width: 100%; /* Текст на всю ширину */
         margin-right: 0;
         margin-bottom: 20px; /* Відступ між текстом і фото */
-        text-align: center; /* Центруємо текст */
+        text-align: center; 
         padding-bottom: 0px;
     }
 
