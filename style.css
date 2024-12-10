@@ -686,7 +686,7 @@ button {
     z-index: 1;
     background-size: contain; /* Зберігає пропорції зображення */
     background-repeat: no-repeat; /* Забороняємо повторення */
-    background-image: url('/Graphics/deco.png'); 
+    background-image: url('Graphics/deco.png'); 
 }
 
 /* Верхній лівий елемент */
@@ -1376,9 +1376,9 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 
 @font-face {
     font-family: 'Mariupol';
-    src: url('/Mariupol/mariupol-regular-webfont.woff2') format('woff2'),
-         url('/Mariupol/mariupol-regular-webfont.woff') format('woff'),
-         url('/Mariupol/Mariupol-Regular.ttf') format('truetype');
+    src: url('Mariupol/mariupol-regular-webfont.woff2') format('woff2'),
+         url('Mariupol/mariupol-regular-webfont.woff') format('woff'),
+         url('Mariupol/Mariupol-Regular.ttf') format('truetype');
 }
 
 @media (max-width: 1280px) {
