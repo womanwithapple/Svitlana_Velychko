@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Creator Portfolio</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <section id="header">
+        <div class="container">
+            <nav class="header-nav">
+                <a href="/index.html" class="logo">
+                    <img src="/Graphics/Logo_header.png" alt="Logo">
+                </a>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about_me.html">About</a></li>
+                    <li><a href="/index.html#skills">Skills</a></li>
+                    <li><a href="/about_me.html#education">Education</a></li>
+                    <li><a href="/index.html#experience-section">Experience</a></li>
+                    <li><a href="/index.html#contact">Contact</a></li>
+                </ul>
+                <a href="/index.html#contact" class="btn_header">CONTACT ME</a>
+            </nav>
+        </div>
+    </section>
+
+    <section id="breadcrumbs">
+        <div class="container">
+            <nav class="breadcrumb-nav"> 
+                <ul class="breadcrumb">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/index.html#experience-section">Experience</a></li>
+                    <li class="active">Customer Service Manager</li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Experience Details Section -->
+    <section class="experience-details">
+        <div class="container">
+            <h4>Internet provider TRINITY, Azovstroykomplekt LLC</h4>
+            <h2>Customer Service Manager</h2>
+            <p class="date-location">July 2009 - April 2011, Mariupol, Ukraine</p>
+            <ul>
+                <li>Was part of the customer service team to ensure timely and effective issue resolution.</li>
+                <li>Designed and arranged visual layouts for articles and instructional materials.Handled customer complaints and implemented solutions to maintain client satisfaction.</li>
+                <li>Coordinated with technical support departments to optimize service delivery.</li>
+                <li>Monitored customer feedback and prepared reports to improve service quality.</li>
+                <li>Trained new team members to ensure consistent performance standards.</li>
+                <li>Implemented customer retention strategies to enhance loyalty and reduce churn.</li>
+                <li>Maintained accurate records of customer interactions, prepared contracts, monitored customer billing and account cards, and resolved issues in compliance with company policies.</li>
+
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <!-- Інформація про контакт -->
+                <div class="contact-info">
+                    <h4>Contact</h4>
+                    <h2>Let's Connect<br>& Collaborate!</h2>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="icon-box"><img src="/Graphics/icon_button.png" class="icon"></div>
+                            <p>+4915150952223</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon-box"><img src="/Graphics/icon_button.png" class="icon"></div>
+                            <p>womanwithapple@gmail.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon-box"><img src="/Graphics/icon_button.png" class="icon"></div>
+                            <a href="https://www.linkedin.com/in/velychko-svitlana/" target="_blank">LinkedIn</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon-box"><img src="/Graphics/icon_button.png" class="icon"></div>
+                            <p>Hamburg, Germany</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Форма для контакту -->
+                <div class="contact-form">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Replace with your Access Key -->
+                        <input type="hidden" name="access_key" value="d490eb6c-dbf9-4c34-aa2b-708a2cd04f1c">
+
+                        <!-- Honeypot Spam Protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <div class="input-row">
+                            <input type="text" name="first_name" placeholder="First name*" required>
+                            <input type="text" name="last_name" placeholder="Last name*" required>
+                        </div>
+                        <div class="input-row">
+                            <input type="email" name="email" placeholder="Email*" required>
+                            <input type="tel" name="phone" placeholder="Phone number*" required>
+                        </div>
+                        <input type="text" name="subject" class="full-width" placeholder="Subject*" required>
+                        <textarea name="message" class="textarea" placeholder="Message*" required></textarea>
+                        <p class="note">*Required fields.</p>
+                        
+                        <button type="submit" class="submit-btn">CONTACT ME <img src="/Graphics/icon_button.png" class="icon"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <footer>
+        <div class="container">
+             <div class="footer-content">
+                 <div class="footer-logo">
+                    <a href="/index.html" class="logo">
+                        <img src="/Graphics/Logo_footer.png" alt="Svitlana Velychko Logo">
+                    </a>
+                 </div>
+            <nav class="footer-nav">
+                <a href="/index.html">Home</a>
+                <a href="/about_me.html">About</a>
+                <a href="/index.html#skills">Skills</a>
+                <a href="/about_me.html#education">Education</a>
+                <a href="/index.html#experience-section">Experience</a>
+                <a href="/index.html#contact">Contact</a>
+            </nav>
+            <div class="footer-line"></div>
+                <div class="footer-info">
+                    <span>© 2024. All rights reserved.</span>
+                    <a href="/Privacy_policy.html">Privacy Policy</a>
+                    <a href="/Terms.html">Terms of Service</a>
+                    <a href="/Cookies.html">Cookies Settings</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#breadcrumbs" id="scrollToTopButton" aria-label="Scroll to top">
+        <img src="/Graphics/icon_button_top.png" alt="Scroll to top" class="icon_button_top">
+    </a>
+</body>
+</html>
