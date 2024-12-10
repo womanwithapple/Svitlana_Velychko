@@ -172,6 +172,7 @@ header, footer {
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .header-nav {
