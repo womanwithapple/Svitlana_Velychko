@@ -20,8 +20,8 @@ body {
 
 .container {
     max-width: 1280px;
-    width: 100%;  /* Це забезпечить, щоб контейнер не перевищував 1280px */
-    margin: 0 auto;  /* Центрує контейнер по горизонталі */
+    width: 100%;  
+    margin: 0 auto;  
     padding: 0px 0px;
 }
 
@@ -193,7 +193,7 @@ header, footer {
     display: flex;
     list-style: none;
     gap: clamp(20px, 5vw, 46px); /* Зміна відстані залежно від ширини екрану */
-    transition: gap 0.3s ease; 
+    transition: gap 0.3s ease;
 }
 
 .header-nav ul li a {
@@ -219,7 +219,7 @@ header, footer {
     font-size: 0.88rem;
     font-weight: 600;
     border: none;
-    border-radius: 50px; /* Скруглення до кола */
+    border-radius: 50px; 
     cursor: pointer;
     text-decoration: none;
     white-space: nowrap;
@@ -312,8 +312,8 @@ footer {
 .hero-content {
     display: flex; /* Створення гнучкого контейнера */
     justify-content: space-between; /* Простір між колонками */
-    align-items: center; /* Вирівнювання по верхньому краю */
-    gap: 32px; /* Відступ між колонками */
+    align-items: center; 
+    gap: 32px; 
 }
 
 .hero-photo, .hero-text {
@@ -327,7 +327,7 @@ footer {
 }
 
 .hero-text {
-    text-align: left;
+    text-align: left; 
     padding-bottom: 40px;
 }
 
@@ -527,7 +527,7 @@ button {
   transition: all 0.4s ease;
 }
 
-
+/* Загальні стилі */
 .hero-about-me {
     text-align: center;
     position: relative;
@@ -561,7 +561,7 @@ button {
     justify-content: center;
 }
 
-
+/* Заголовки та текст */
 .hero-about-me h2 {
     margin-bottom: 24px;
     color: #22272D;
@@ -581,7 +581,7 @@ button {
 }
 
 .experience-details {
-    background-color: #22272D; 
+    background-color: #22272D;
     color: #F9F7F5; 
     padding: 114px 20px 106px; 
     text-align: center;
@@ -603,12 +603,12 @@ button {
 
 .experience-details p.date-location {
     font-size: 1rem;
-    color: #9BDA09; 
+    color: #9BDA09;
     margin-top: 24px;
 }
 
 .experience-details ul {
-    list-style-type: disc; 
+    list-style-type: disc;
     text-align: left;
     margin: 24px auto;
     padding-left: 40px;
@@ -625,10 +625,10 @@ button {
 .experience-journey {
     background-color: #22272D; 
     color: #F9F7F5; 
-    padding: 114px 20px 106px; 
+    padding: 114px 20px 106px;
     text-align: center;
     border-radius: 24px;
-    max-width: 1060px;
+    max-width: 1060px; 
     width: 100%;
     margin: 114px auto 114px;
     position: relative;
@@ -636,7 +636,7 @@ button {
 }
 
 .passion {
-    list-style: none; 
+    list-style: none; /* Прибираємо крапки для першого списку */
     padding: 0 40px;
     margin: 0 0 72px; 
 }
@@ -735,7 +735,7 @@ button {
     align-items: center;
     gap: 38px;
     width: 100%;
-    margin-bottom: 38px; 
+    margin-bottom: 38px;
 }
 
 .education-icon {
@@ -802,7 +802,7 @@ button {
 
 .skill-box {
     background-color: transparent;
-    width: calc(50% - 16px); /* Ширина для великих екранів */
+    width: calc(50% - 16px);
     min-width: 624px;
     height: 440px;
     perspective: 1000px; /* Для 3D перевороту */
@@ -851,6 +851,7 @@ button {
     transform: rotateY(0deg);
 }
 
+/* Іконка */
 .skill-icon {
     width: 64px; 
     height: 64px; 
@@ -893,7 +894,7 @@ button {
 
 .skill-back ul {
     margin-top: 24px;
-    padding-left: 32px; 
+    padding-left: 32px;
     text-align: left;
 }
 
@@ -909,8 +910,8 @@ button {
     right: 32px;
     bottom: 32px;
     max-width: 264px;
-    height: calc(100% - 64px); /* Відняти верхній і нижній відступи */
-    width: calc((100% - 96px) / 2); /* Ширина зображення для великих екранів */
+    height: calc(100% - 64px); 
+    width: calc((100% - 96px) / 2); 
     object-fit: cover;
     border-radius: 0 16px 16px 0;
 }
@@ -1002,7 +1003,7 @@ button {
 .content-row {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between; /* Заголовок зліва, кнопка справа */
+    justify-content: space-between; 
     padding: 24px;
 }
 
@@ -1104,7 +1105,7 @@ button {
 
 .hobbies-gallery-row {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* Додаємо можливість переносу рядків */
     justify-content: center; 
     gap: 4px; 
     max-width: 100%;
@@ -1116,7 +1117,7 @@ button {
     height: 208px; 
     border-radius: 16px;
     overflow: hidden;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Забороняємо зменшення елементів */
     scroll-snap-align: start;
 }
 
@@ -1267,6 +1268,8 @@ button {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.025);
 }
 
+
+/* Іконки */
 .icon-decor {
     display: flex;
     align-items: center;
@@ -1372,9 +1375,10 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
     .header-nav ul {
         gap: 46px;
     }
+
     .experience-details {
         padding: 114px 20px 106px 20px; 
-        max-width: calc(100% - 40px);
+        max-width: calc(100% - 40px); 
     }
 }
 
@@ -1382,7 +1386,7 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
     .experience-journey .decorative-top-left,
     .experience-journey .decorative-bottom-right {
         height: 75px; 
-        width: 97px;
+        width: 97px; 
     }
 
     .experience-journey .decorative-top-left {
@@ -1428,7 +1432,7 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 
     .experience-journey .decorative-top-left,
     .experience-journey .decorative-bottom-right {
-        height: 10vw; /* Пропорційне зменшення */
+        height: 10vw;
         width: 12vw;
     }
 
@@ -1446,20 +1450,8 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 
 @media (max-width: 1024px) {
     .header-nav ul {
-        display: none; /* Приховує меню за замовчуванням */
+        display: none; 
         gap: 30px;
-    }
-
-    .header-nav ul.active {
-        display: flex; /* Відображення меню при активності */
-        flex-direction: column; /* Вертикальне меню */
-        position: absolute;
-        top: 120px;
-        left: 0;
-        background-color: #F9F7F5;
-        width: 100%;
-        padding: 20px;
-        gap: 16px;
     }
 
     .hero-text {
@@ -1493,22 +1485,21 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
     }
 
     .about-me-content {
-        flex-direction: column; /* Фото під текстом */
-        align-items: center; /* Центруємо вміст */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .about-me-text {
         flex: none; /* Скидаємо пропорцію */
         width: 100%; /* Текст на всю ширину */
         margin-right: 0;
-        margin-bottom: 20px; /* Відступ між текстом і фото */
-        text-align: center; 
+        margin-bottom: 20px; 
         padding-bottom: 0px;
     }
 
     .about-me-photo {
-        flex: none; /* Скидаємо пропорцію */
-        width: 100%; /* Фото на всю ширину */
+        flex: none; 
+        width: 100%;
     }
 
     .about-me-photo img {
@@ -1547,6 +1538,7 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
     #hero {
         margin-bottom: 52px;
     }
+
     .hero-content {
         flex-direction: column;
         align-items: center;
@@ -1565,7 +1557,7 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
         width: 90vw; /* Ширина фото - 90% ширини екрану */
         aspect-ratio: 3 / 5;
         object-fit: cover; /* Забезпечує правильну обрізку в межах квадрата */
-        margin: 0 auto; /* Центрування на екрані */
+        margin: 0 auto; 
         display: block; /* Усуває проблеми з inline-block вирівнюванням */
     }
 
@@ -1609,24 +1601,24 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
         margin-right: 4vw;
     }
     .hobbies-gallery-row {
-        justify-content: center; /* Розташовує елементи рівномірно */
+        justify-content: center; 
     }
     .clients-grid {
-        justify-content: center; /* Центрування логотипів */
-        gap: 32px; /* Відстань між елементами залишається */
+        justify-content: center; 
+        gap: 32px; 
     }
     .contact-content {
-        flex-direction: column; /* Елементи розташовуються вертикально */
+        flex-direction: column;
     }
 
     .contact-info {
-        margin-bottom: 40px; /* Відступ між інформацією та формою */
+        margin-bottom: 40px;
     }
 
     .contact-form {
         order: 1; /* Переміщує форму вниз */
         width: calc(100% - 20px); /* Віднімаємо загальний padding */
-        margin: 0 auto; /* Вирівнюємо форму по центру */
+        margin: 0 auto;
     }
 
     .footer-content {
@@ -1653,23 +1645,23 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
     .footer-info {
         display: flex;
         flex-direction: column; /* Робимо в одну колонку */
-        align-items: flex-start; /* Вирівнюємо елементи по лівому краю */
-        gap: 8px; /* Відступ між елементами */
-        width: 100%; /* Розтягуємо на всю ширину */
+        align-items: flex-start; 
+        gap: 8px; 
+        width: 100%; 
         max-width: 600px;
         margin-top: 24px;
-        text-align: left; /* Текст вирівнюється по лівому краю */
+        text-align: left; 
     }
     .footer-info span {
         margin-bottom: 16px;
     }
     .icon-button {
-        width: 60px; /* Залишаємо фіксовану ширину */
-        height: 60px; /* Залишаємо фіксовану висоту */
+        width: 60px; 
+        height: 60px; 
     }
 
     .icon-button img {
-        width: 20px; /* Іконка залишається незмінною */
+        width: 20px; 
         height: 20px;
     }
 
@@ -1684,17 +1676,6 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 }
 
 @media (max-width: 600px) {
-     #header {
-    display: flex;
-    flex-direction: column;
-    }
-
-    .btn_header {
-        padding: 20px 20px;
-        font-size: 0.88rem; 
-        margin-top: 16px;
-    }
-    
     .icon-decor {
         display: none;
     }
@@ -1704,12 +1685,25 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
     }
 
     .skill-image {
-        display: none;
+        max-width: 200px;
     }
 }
 
 @media (max-width: 480px) {
-   
+    .btn_header {
+        font-size: 0.88rem; 
+        margin-top: 16px; 
+    }
+
+    .header-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #header {
+        height: 240px;
+    }
+
     .experience-journey {
         padding: 40px 12px;
     }
@@ -1718,7 +1712,52 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
     .experience-journey .decorative-bottom-right {
         display: none;
     }
+
     .hobbies-gallery-row {
         justify-content: center;
+    }
+
+    .skill-box {
+        max-width: 440px;
+        min-width: 320px;
+    }
+
+    .skill-image {
+        max-width: 80px;
+        min-width: 60px;
+    }
+    .skill-back {
+    padding: 16px;
+    }
+
+    .skill-back .icon-h3 {
+        margin-bottom: 16px; 
+    }
+
+    .skill-back .skill-icon {
+        width: 36px; 
+        height: 36px; 
+        flex-shrink: 0; 
+    }
+
+    .skill-back h3 {
+        margin: 0;
+        color: #F9F7F5;
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    .skill-back ul {
+        margin-top: 8px;
+        padding-left: 16px;
+        text-align: left;
+    }
+
+    .skill-back li {
+        margin-bottom: 8px;
+    }
+    .tool h5 {
+        font-size: 0.8rem;
+        hyphens: auto;
     }
 }
