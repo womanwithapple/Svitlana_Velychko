@@ -1320,7 +1320,6 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 
 /* Коли на кнопці наведено курсор */
 #scrollToTopButton:hover, #scrollToTopButton:active  {
-  background-color: #86ba0d;
   transform: scale(1.05);
 }
 
