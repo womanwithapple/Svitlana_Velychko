@@ -1,4 +1,13 @@
-
+:root {
+    --color-accent-first: #9BDA09; /* Основний колір */
+    --color-accent-second: #975FFF; /* Другорядний колір */
+    --color-light: #F9F7F5; /* Колір фону */
+    --color-black: #22272D; /* Основний текстовий колір */
+    --color-dark-grey: #4D5155;
+    --color-accent-first-hover: #608902; /* Основний колір */
+    --color-accent-second-hover: #6439b4; /* Другорядний колір */
+    --background-color-normal-mode: #FFFFFF;
+}
 
 * {
     margin: 0;
@@ -9,11 +18,11 @@
 
 body {
     height: 100vh;
-    background-color: white;
+    background-color: var(--background-color-normal-mode);
     font-family: 'Mariupol';
     font-size: 18px;
     line-height: 1.4;
-    color: #22272D;
+    color: var(--color-black);
     text-decoration: none;    
 }
 
@@ -30,7 +39,7 @@ h1 {
     font-size: 8.88rem; /* ~160px */
     font-weight: 700;
     line-height: 1;
-    color: #22272D;
+    color: var(--color-black);
     letter-spacing: 3px;
 }
 
@@ -39,7 +48,7 @@ h2 {
     font-size: 2.33rem; /* ~42px */
     font-weight: 600;
     line-height: 1;
-    color: #22272D;
+    color: var(--color-black);
     letter-spacing: 1px;
 }
 
@@ -48,7 +57,7 @@ h3 {
     font-size: 1.78rem; /* ~32px */
     font-weight: 600;
     line-height: 1;
-    color: #22272D;
+    color: var(--color-black);
     letter-spacing: 1px;
 }
 
@@ -57,14 +66,14 @@ h4 {
     font-size: 1.78rem; /* ~32px */
     line-height: 1.4;
     font-weight: normal;
-    color: #22272D;
+    color: var(--color-black);
 }
 
 h5 {
     font-size: 1rem;
     font-weight: 600;
     line-height: 140%;
-    color: #22272D;
+    color: var(--color-black);
 }
 
 p {
@@ -84,7 +93,7 @@ p {
     list-style: none;
     font-size: 0.78rem; /* ~14px */
     line-height: 1.4;
-    color: #22272D;
+    color: var(--color-black);
     padding: 0;
     margin: 0;
 }
@@ -100,7 +109,7 @@ p {
 
 .breadcrumb li a {
     text-decoration: none;
-    color: #22272D;
+    color: var(--color-black);
     font-size: 0.78rem;
     transition: all 0.3s ease;
 }
@@ -120,7 +129,7 @@ header, footer {
     font-size: 1rem; /* 18px */
     line-height: 1.4;
     font-weight: 600;
-    color: #22272D;
+    color: var(--color-black);
 }
 
 
@@ -131,8 +140,8 @@ header, footer {
     font-size: 1rem; /* 18px */
     font-weight: 600;
     padding: 20px 40px 16px 40px;
-    color: #22272D;
-    background-color: #975FFF;
+    color: var(--color-black);
+    background-color: var(--color-accent-second);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -143,8 +152,8 @@ header, footer {
 
 
 .btn:hover, .btn:active {
-    color: #F9F7F5;
-    background-color: #6439b4;
+    color: var(--color-light);
+    background-color: var(--color-accent-second-hover);
     text-decoration: none;
     transform: scale(1.05);
 }
@@ -167,7 +176,7 @@ header, footer {
     display: flex;
     align-items: center;
     height: 120px;
-    background-color: #F9F7F5;
+    background-color: var(--color-light);
     z-index: 1000;
     width: 100%;
     margin: 0 auto;
@@ -199,7 +208,7 @@ header, footer {
 
 .header-nav ul li a {
     text-decoration: none;
-    color: #22272D;
+    color: var(--color-black);
     font-size: 1rem;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -207,7 +216,7 @@ header, footer {
 
 .header-nav ul li a:hover {
     text-decoration: underline;
-    color: #608902;
+    color: var(--color-accent-first-hover);
 }
 
 /* Кнопка */
@@ -215,29 +224,29 @@ header, footer {
     display: inline-flex;
     align-items: center;
     padding: 14px 32px 12px 32px;
-    background-color: #9BDA09;
-    color: #22272D;
+    background-color: var(--color-accent-first);
+    color: var(--color-black);
     font-size: 0.88rem;
     font-weight: 600;
     border: none;
     border-radius: 50px; 
     cursor: pointer;
     text-decoration: none;
-    white-space: nowrap;
+    var(--background-color-normal-mode)-space: nowrap;
     gap: 14px;
     transition: all 0.3s ease;
 }
 
 .btn_header:hover, .btn_header:active {
     background-color: #86ba0d; 
-    color: #F9F7F5;
+    color: var(--color-light);
     text-decoration: none;
     transform: scale(1.05);
 }
 
 
 footer {
-    background-color: #F9F7F5;
+    background-color: var(--color-light);
     text-align: center;
     padding: 72px 20px;
 }
@@ -262,19 +271,19 @@ footer {
 .footer-nav a {
     font-size: 1rem;
     font-weight: 500;
-    color: #22272D;
+    color: var(--color-black);
     text-decoration: none;
 }
 
 .footer-nav a:hover {
     text-decoration: underline;
-    color: #608902;
+    color: var(--color-accent-first-hover);
 }
 
 .footer-line {
     width: 842px;
     height: 1px;
-    background-color: #22272D;
+    background-color: var(--color-black);
     margin: 56px auto;
 }
 
@@ -289,7 +298,7 @@ footer {
 .footer-info a{
     font-size: 1rem;
     font-weight: 600;
-    color: #22272D;
+    color: var(--color-black);
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -301,7 +310,7 @@ footer {
 
 
 .highlight {
-    color: #9BDA09;
+    color: var(--color-accent-first);
 }
 
 
@@ -338,11 +347,11 @@ footer {
 
 .hero-text h2 {
     margin-bottom: 32px;
-    color: #22272D;
+    color: var(--color-black);
 }
 
 .about {
-    background-color: #22272D;
+    background-color: var(--color-black);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -362,24 +371,24 @@ footer {
 
 .about h4 {
     margin-bottom: 52px;
-    color: #F9F7F5;
+    color: var(--color-light);
 }
 
 
 .about h2 {
     margin-bottom: 24px;
-    color: #F9F7F5;
+    color: var(--color-light);
 }
 
 
 .about p {
     margin-bottom: 52px;
-    color: #F9F7F5;
+    color: var(--color-light);
 }
 
 #contact {
-    background-color: #22272D;
-    color: #F9F7F5;
+    background-color: var(--color-black);
+    color: var(--color-light);
     padding: 114px 20px;
 }
 
@@ -404,7 +413,7 @@ footer {
 .contact-info h4,
 .contact-info h2 {
     margin-bottom: 52px;
-    color: #F9F7F5;
+    color: var(--color-light);
 }
 
 .contact-items {
@@ -422,7 +431,7 @@ footer {
     font-size: 1rem;
     line-height: 1.4;
     text-decoration: none;
-    color: #F9F7F5;
+    color: var(--color-light);
     transition: all 0.3s ease;
 }
 
@@ -437,9 +446,9 @@ footer {
     width: 56px;
     height: 56px;
     border-radius: 16px;
-    background-color: #F9F7F5;
+    background-color: var(--color-light);
     margin-right: 24px;
-    color: #22272D;
+    color: var(--color-black);
     transition: all 0.3s ease;
 }
 
@@ -460,8 +469,8 @@ form {
 
 input, textarea {
     background-color: rgba(249, 247, 245, 0.2);
-    border: 2px solid #F9F7F5;
-    color: #F9F7F5;
+    border: 2px solid var(--color-light);
+    color: var(--color-light);
     padding: 10px 20px;
     border-radius: 29px;
     width: 100%;
@@ -473,7 +482,7 @@ input:hover, textarea:hover {
 }
 
 input::placeholder, textarea::placeholder {
-    color: #F9F7F5;
+    color: var(--color-light);
 }
 
 input {
@@ -491,7 +500,7 @@ input {
 }
 
 .note {
-    color: #F9F7F5;
+    color: var(--color-light);
     margin-bottom: 40px;
 }
 
@@ -502,14 +511,14 @@ input {
     font-size: 1rem; /* 18px */
     font-weight: 600;
     padding: 20px 40px 16px 40px;
-    color: #22272D;
+    color: var(--color-black);
     background-color: #9ACD32;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     text-decoration: none;
     gap: 14px;
-    white-space: nowrap; /* Запобігає переносу тексту */
+    var(--background-color-normal-mode)-space: nowrap; /* Запобігає переносу тексту */
     transition: all 0.3s ease;
 }
 
@@ -518,7 +527,7 @@ button {
 }
 
 .submit-btn:hover, .btn:active {
-    color: #F9F7F5;
+    color: var(--color-light);
     background-color: #86ba0d;
     transform: scale(1.05);
 }
@@ -565,7 +574,7 @@ button {
 /* Заголовки та текст */
 .hero-about-me h2 {
     margin-bottom: 24px;
-    color: #22272D;
+    color: var(--color-black);
 }
 
 .hero-about-me h3 {
@@ -582,8 +591,8 @@ button {
 }
 
 .experience-details {
-    background-color: #22272D;
-    color: #F9F7F5; 
+    background-color: var(--color-black);
+    color: var(--color-light); 
     padding: 114px 20px 106px; 
     text-align: center;
     max-width: 1060px;
@@ -595,7 +604,7 @@ button {
 }
 
 .experience-details h4, h2 {
-    color: #F9F7F5;
+    color: var(--color-light);
 }
 
 .experience-details h4 {
@@ -604,7 +613,7 @@ button {
 
 .experience-details p.date-location {
     font-size: 1rem;
-    color: #9BDA09;
+    color: var(--color-accent-first);
     margin-top: 24px;
 }
 
@@ -614,7 +623,7 @@ button {
     margin: 24px auto;
     padding-left: 40px;
     max-width: 1000px;
-    color: #F9F7F5;
+    color: var(--color-light);
 }
 
 .experience-details ul li {
@@ -624,8 +633,8 @@ button {
 }
 
 .experience-journey {
-    background-color: #22272D; 
-    color: #F9F7F5; 
+    background-color: var(--color-black); 
+    color: var(--color-light); 
     padding: 114px 20px 106px;
     text-align: center;
     border-radius: 24px;
@@ -661,7 +670,7 @@ button {
 
 .experience-journey h4 {
     margin-bottom: 52px; 
-    color: #F9F7F5;
+    color: var(--color-light);
 }
 
 .experience-journey h2 {
@@ -677,7 +686,7 @@ button {
     z-index: 1;
     background-size: contain; /* Зберігає пропорції зображення */
     background-repeat: no-repeat; /* Забороняємо повторення */
-    background-image: url('Graphics/deco.png'); 
+    background-image: url('/Graphics/deco.png'); 
 }
 
 /* Верхній лівий елемент */
@@ -719,7 +728,7 @@ button {
 
 .content-box {
     flex: 1;
-    background-color: #F9F7F5;
+    background-color: var(--color-light);
     padding: 32px;
     display: flex;
     flex-direction: column;
@@ -751,7 +760,7 @@ button {
 }
 
 #education h2 {
-    color: #22272D;
+    color: var(--color-black);
     margin-top: 52px;
     margin-bottom: 52px;
 }
@@ -784,7 +793,7 @@ button {
 
 #skills h2 {
     margin-bottom: 24px;
-    color: #22272D;
+    color: var(--color-black);
 }
 
 #skills p {
@@ -823,7 +832,7 @@ button {
 }
 
 .skill-front {
-    background-color: #22272D;
+    background-color: var(--color-black);
     z-index: 2;
     transform: rotateY(0deg);
     display: flex;
@@ -834,12 +843,12 @@ button {
 
 /* Задня сторона */
 .skill-back {
-    background-color: #22272D;
+    background-color: var(--color-black);
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     padding: 32px;
-    color: #F9F7F5;
+    color: var(--color-light);
 }
 
 
@@ -869,7 +878,7 @@ button {
 
 .skill-content h3 {
     margin: 0;
-    color: #F9F7F5;
+    color: var(--color-light);
 }
 
 .skill-back .icon-h3 {
@@ -888,7 +897,7 @@ button {
 
 .skill-back h3 {
     margin: 0;
-    color: #F9F7F5;
+    color: var(--color-light);
     line-height: 1.2;
     text-align: left;
 }
@@ -930,7 +939,7 @@ button {
 
 .clients h2 {
     margin-bottom: 52px;
-    color: #22272D;
+    color: var(--color-black);
 }
 
 .clients-grid {
@@ -960,14 +969,14 @@ button {
 #experience-section {
     padding: 114px 20px;
     text-align: center;
-    background-color: #F9F7F5;
+    background-color: var(--color-light);
     margin-top: 114px;
 }
 
 #experience-section h2 {
     margin-top: 52px;
     font-size: 36px;
-    color: #22272D;
+    color: var(--color-black);
 }
 
 .experience-row {
@@ -1009,7 +1018,7 @@ button {
 }
 
 .experience-block h3 {
-    color: #22272D;
+    color: var(--color-black);
     padding-right: 16px;
 }
 
@@ -1027,7 +1036,7 @@ button {
 .icon-button {
     width: 60px;
     height: 60px;
-    border: 1px solid #9BDA09;
+    border: 1px solid var(--color-accent-first);
     display: flex;
     align-items: center; 
     justify-content: center; 
@@ -1043,7 +1052,7 @@ button {
 }
 
 .icon-button:hover {
-    background-color: #9BDA09;
+    background-color: var(--color-accent-first);
     transform: scale(1.05);
 }
 
@@ -1063,7 +1072,7 @@ button {
 
 .gallery h2 {
     margin-bottom: 52px;
-    color: #22272D;
+    color: var(--color-black);
 }
 
 .gallery-grid {
@@ -1101,7 +1110,7 @@ button {
 
 .hobbies h2 {
     margin-bottom: 52px;
-    color: #22272D;
+    color: var(--color-black);
 }
 
 .hobbies-gallery-row {
@@ -1136,8 +1145,8 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #22272D;
-    color: #F9F7F5;
+    background: var(--color-black);
+    color: var(--color-light);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1154,7 +1163,7 @@ button {
 
 .overlay h5 {
     margin-bottom: 8px;
-    color: #F9F7F5;
+    color: var(--color-light);
 }
 
 .overlay p {
@@ -1194,14 +1203,14 @@ button {
 
 .stretch-left {
   flex: 12;
-  background-color: #F9F7F5;
+  background-color: var(--color-light);
   height: 8px;
   border-radius: 0 50px 50px 0;
 }
 
 .stretch-right {
   flex: 12;
-  background-color: #F9F7F5;
+  background-color: var(--color-light);
   height: 8px;
   border-radius: 50px 0 0 50px;
 }
@@ -1210,7 +1219,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #F9F7F5;
+  background-color: var(--color-light);
   height: 80px;
   width: 300px;
   border-radius: 50px;
@@ -1254,7 +1263,7 @@ button {
   flex: 1;
   align-items: center;
   justify-content: center;
-  background-color: #F9F7F5;
+  background-color: var(--color-light);
   height: 80px;
   width: 300px;
   border-radius: 50px;
@@ -1278,7 +1287,7 @@ button {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: #F9F7F5;
+    background-color: var(--color-light);
 }
 
 .icon-decor img {
@@ -1298,7 +1307,7 @@ button {
   right: 16px;
   width: 56px;
   height: 56px;
-  background-color: #9BDA09;
+  background-color: var(--color-accent-first);
   border-radius: 50%;
   display: none; /* Спочатку кнопка прихована */
   justify-content: center;
@@ -1321,6 +1330,7 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 
 /* Коли на кнопці наведено курсор */
 #scrollToTopButton:hover, #scrollToTopButton:active  {
+  background-color: #86ba0d;
   transform: scale(1.05);
 }
 
@@ -1331,12 +1341,12 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 
 #privacy-policy, #terms-of-service {
     padding: 40px 0;
-    background-color: white;
+    background-color: var(--background-color-normal-mode);
 }
 
 #privacy-policy h2 {
     text-align: center;
-    color: #22272D;
+    color: var(--color-black);
     margin-bottom: 20px;
 }
 
@@ -1347,12 +1357,12 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 }
 
 #privacy-policy h3 {
-    color: #22272D;
+    color: var(--color-black);
     margin: 36px 0 16px;
 }
 
 #privacy-policy p {
-    color: #22272D;
+    color: var(--color-black);
     margin-bottom: 20px;
 }
 
@@ -1366,9 +1376,9 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 
 @font-face {
     font-family: 'Mariupol';
-    src: url('Mariupol/mariupol-regular-webfont.woff2') format('woff2'),
-         url('Mariupol/mariupol-regular-webfont.woff') format('woff'),
-         url('Mariupol/Mariupol-Regular.ttf') format('truetype');
+    src: url('/Mariupol/mariupol-regular-webfont.woff2') format('woff2'),
+         url('/Mariupol/mariupol-regular-webfont.woff') format('woff'),
+         url('/Mariupol/Mariupol-Regular.ttf') format('truetype');
 }
 
 @media (max-width: 1280px) {
@@ -1742,7 +1752,7 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 
     .skill-back h3 {
         margin: 0;
-        color: #F9F7F5;
+        color: var(--color-light);
         line-height: 1.2;
         text-align: left;
     }
@@ -1756,13 +1766,12 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
     .skill-back li {
         margin-bottom: 8px;
     }
-    
-    .tool h5,
-    .area h5 {
+    .tool h5 {
         font-size: 0.8rem;
         hyphens: auto;
     }
 }
+
 
 @keyframes slide-in-up {
     from {
