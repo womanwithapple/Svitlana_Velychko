@@ -1145,7 +1145,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    color: var(--color-light); /* Колір тексту */
+    color: var(--color-light);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1153,7 +1153,7 @@ button {
     text-align: center;
     padding: 16px;
     box-sizing: border-box;
-    transition: bottom 0.8s ease-in-out; /* Плавний виїзд */
+    transition: bottom 0.8s ease-in-out;
     z-index: 1;
 }
 .overlay::before {
@@ -1163,8 +1163,8 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(34, 39, 45, 0.87) 40%, rgba(34, 39, 45, 0.7) 60%, rgba(34, 39, 45, 1) 100%);
-    z-index: -1; /* Псевдоелемент знаходиться позаду */
+    background: rgba(34, 39, 45, 0.87);
+    z-index: -1; 
     transition: background 0.8s ease-in-out; 
 }
 .hobbies-image-container:hover .overlay {
@@ -1173,7 +1173,7 @@ button {
 .overlay h2, .overlay p {
     opacity: 0;
     transform: translateY(20px); 
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.6s ease-in, transform 0.6s ease-in;
 }
 
 .overlay:hover h2, .overlay:hover p {
