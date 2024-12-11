@@ -1108,7 +1108,6 @@ button {
 }
 
 .hobbies {
-    margin-top: 114px;
     margin-bottom: 114px;
     text-align: center;
     padding: 0 10px;
@@ -1470,7 +1469,7 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
     }
     .experience-journey {
         padding: 80px 20px;
-        margin: 114px 20px;
+        margin: 114px 20px 0px;
         width: calc(100% - 40px);
     }
 
