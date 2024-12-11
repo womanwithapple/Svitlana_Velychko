@@ -1675,7 +1675,7 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
     }
 
     .footer-line {
-        margin: 24px auto;
+        margin: 36px auto;
         width: 100%;
         max-width: 400px;
     }
@@ -1686,7 +1686,6 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
         gap: 8px; 
         width: 100%; 
         max-width: 600px;
-        margin-top: 24px;
         text-align: left; 
     }
     .footer-info span {
