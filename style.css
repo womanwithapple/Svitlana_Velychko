@@ -1441,7 +1441,8 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
     }
     .hero-text h1 {
         font-size: 6rem; 
-        margin-bottom: 52px;
+        margin-bottom: 32px;
+        letter-spacing: 2px;
     }
     .hero-text h2 {
         font-size: 1.78rem; /* ~32px */
@@ -1488,8 +1489,8 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
         max-width: 100%;
     }
     .hero-text h1 {
-        font-size: 4rem; /* ~72px */
-        margin-bottom: 32px;
+        font-size: 5rem;
+        margin-bottom: 24px;
     }
     .hero-text h2 {
         line-height: 1;
