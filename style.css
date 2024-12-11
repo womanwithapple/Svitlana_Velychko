@@ -1561,7 +1561,10 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
         display: flex; 
         justify-content: center;
         align-items: center;
-        margin: 0 auto; 
+        margin: 0 auto;
+        opacity: 0;
+        transform: translateY(100px);
+        animation: slide-in-up 2s ease-in-out 1 forwards;
     }
     .hero-photo img {
         width: 90vw; /* Ширина фото - 90% ширини екрану */
