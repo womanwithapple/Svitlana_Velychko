@@ -1734,18 +1734,18 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 }
 
 @media (max-width: 480px) {
-    .btn_header {
-        font-size: 0.88rem; 
-        margin-top: 16px; 
-    }
-
-    .header-nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
     #header {
-        height: 240px;
+        justify-content: space-between;
+    }
+    
+    .btn_header {
+        font-size: 0.78rem; 
+        padding: 12px 26px 10px 26px; 
+    }
+
+    .logo img{
+        flex-grow: 1; /* Логотип автоматично займе весь доступний простір */
+        max-width: calc(100vw - 40px - 16px - 120px);
     }
 
     .experience-journey {
