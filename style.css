@@ -1740,7 +1740,7 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
     
     .btn_header {
         font-size: 0.78rem; 
-        padding: 12px 26px 10px 26px; 
+        padding: 12px 24px 10px 24px; 
     }
 
     .logo img{
