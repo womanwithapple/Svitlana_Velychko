@@ -120,7 +120,7 @@ p {
 }
 
 .breadcrumb li.active {
-    color: var(--background-color-normal-mode);
+    color: var(--color-dark-grey);
     pointer-events: none;
 }
 
@@ -622,7 +622,7 @@ button {
 
 .experience-details p.date-location {
     font-size: 1rem;
-    color: var(--color-dark-grey);
+    color: var(--color-accent-first);
     margin-top: 24px;
 }
 
