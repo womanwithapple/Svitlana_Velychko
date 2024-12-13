@@ -562,7 +562,7 @@ input, textarea {
 }
 
 input:hover, textarea:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 input::placeholder, textarea::placeholder {
@@ -618,7 +618,7 @@ button {
 
 .submit-btn:hover .icon, .submit-btn:active .icon {
   filter: brightness(0) invert(1);
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 /* Загальні стилі */
@@ -1331,7 +1331,7 @@ button {
 }
 
 .tool:hover {
-    transform: scale(1.03);
+    transform: scale(1.01);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.025);
 }
 
@@ -1375,7 +1375,7 @@ button {
 }
 
 .area:hover {
-    transform: scale(1.03);
+    transform: scale(1.01);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.025);
 }
 
@@ -1580,7 +1580,6 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
     }
 
     .dropdown-content a:hover {
-        transform: scale(1.05);
         color: var(--color-accent-second-hover);
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
         font-weight: 600;
