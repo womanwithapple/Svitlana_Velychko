@@ -4,7 +4,7 @@
     --color-light: #F9F7F5; /* Колір фону */
     --color-black: #22272D; /* Основний текстовий колір */
     --color-dark-grey: #4D5155;
-    --color-accent-first-hover: #608902; /* Основний колір */
+    --color-accent-first-hover: #7DC31B; /* Основний колір */
     --color-accent-second-hover: #6439b4; /* Другорядний колір */
     --background-color-normal-mode: #FFFFFF;
 }
@@ -111,12 +111,13 @@ p {
     text-decoration: none;
     color: var(--color-black);
     font-size: 0.78rem;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in;
 }
 
 .breadcrumb li a:hover {
-    text-decoration: underline;
-    
+    font-weight: 600;
+    color: var(--color-dark-grey);
+    letter-spacing: 0.5px;
 }
 
 .breadcrumb li.active {
@@ -124,14 +125,74 @@ p {
     pointer-events: none;
 }
 
-
-header, footer {
-    font-size: 1rem; /* 18px */
-    line-height: 1.4;
-    font-weight: 600;
-    color: var(--color-black);
+.hero-text h2,
+.hero-text h1,
+.hero-text .btn,
+.about-me-text h3,
+.about-me-text h2,
+.about-me-text p,
+.about-me-text .btn {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: slide-in-up 2s ease-in-out 1 forwards;
+}
+.hero-text h2 {
+    animation-delay: 0s; /* Затримка для першого елемента */
 }
 
+.hero-text h1 {
+    animation-delay: 0.3s; /* Затримка для другого елемента */
+}
+
+.hero-text .btn {
+    animation-delay: 0.6s; /* Затримка для кнопки */
+}
+
+.about-me-text h3 {
+    animation-delay: 0s;
+}
+.about-me-text h2 {
+    animation-delay: 0.3s;
+}
+.about-me-text p {
+    animation-delay: 0.6s;
+}
+.about-me-text .btn {
+    animation-delay: 0.9s;
+}
+
+@keyframes slide-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Фінальний стан */
+    }
+}
+
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-100px); /* Початкове положення зліва */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Кінцеве положення */
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(100px); /* Початкове положення зліва */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Кінцеве положення */
+    }
+}
 
 /* Button */
 .btn {
@@ -141,28 +202,28 @@ header, footer {
     font-weight: 600;
     padding: 20px 40px 16px 40px;
     color: var(--color-black);
-    background-color: var(--color-accent-second);
+    background-color: var(--color-accent-first);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     text-decoration: none;
     gap: 14px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in;
 }
 
 
 .btn:hover, .btn:active {
-    color: var(--color-light);
-    background-color: var(--color-accent-second-hover);
-    text-decoration: none;
     transform: scale(1.05);
+    color: var(--color-light);
+    background-color: var(--color-accent-first-hover);
+    text-decoration: none;
 }
 
 
 .icon {
   width: 14px;
   height: 14px;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease-in;
 }
 
 
@@ -175,7 +236,7 @@ header, footer {
     top: 0;
     display: flex;
     align-items: center;
-    height: 120px;
+    height: 100px;
     background-color: var(--color-light);
     z-index: 1000;
     width: 100%;
@@ -184,48 +245,59 @@ header, footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-
 .header-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    overflow: hidden;
 }
-
-.logo img {
-    height: 100%;
-    max-height: 120px;
-    width: auto;
-    cursor: pointer; /* Зміна курсора для натискання */
-}
-
-/* Навігація */
-.header-nav ul {
+.static-content ul {
     display: flex;
     list-style: none;
     gap: clamp(20px, 5vw, 46px); /* Зміна відстані залежно від ширини екрану */
-    transition: gap 0.3s ease;
+    transition: gap 0.3s ease-in;
 }
 
-.header-nav ul li a {
+.static-content ul li a {
     text-decoration: none;
     color: var(--color-black);
     font-size: 1rem;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in;
 }
 
-.header-nav ul li a:hover {
-    text-decoration: underline;
-    color: var(--color-accent-first-hover);
+.static-content ul li a:hover {
+    color: var(--color-accent-second-hover);
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
-/* Кнопка */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .drop-btn {
+  border: none;
+  outline: none;
+  color: var(--color-light);
+  padding: 14px 0px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-content {
+    display: none;
+}
+
 .btn_header {
     display: inline-flex;
     align-items: center;
     padding: 14px 32px 12px 32px;
-    background-color: var(--color-accent-first);
+    background-color: var(--color-accent-second);
     color: var(--color-black);
     font-size: 0.88rem;
     font-weight: 600;
@@ -235,21 +307,24 @@ header, footer {
     text-decoration: none;
     white-space: nowrap;
     gap: 14px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in;
 }
 
 .btn_header:hover, .btn_header:active {
-    background-color: #86ba0d; 
+    background-color: var(--color-accent-second-hover); 
     color: var(--color-light);
     text-decoration: none;
-    transform: scale(1.05);
+    transform: scale(1.03) translateX(-4px);
 }
-
 
 footer {
     background-color: var(--color-light);
     text-align: center;
     padding: 72px 20px;
+    font-size: 1rem; /* 18px */
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--color-black);
 }
 
 .footer-content {
@@ -274,11 +349,13 @@ footer {
     font-weight: 500;
     color: var(--color-black);
     text-decoration: none;
+    transition: all 0.3s ease-in;
 }
 
 .footer-nav a:hover {
-    text-decoration: underline;
-    color: var(--color-accent-first-hover);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--color-accent-second-hover);
 }
 
 .footer-line {
@@ -298,14 +375,14 @@ footer {
 }
 .footer-info a{
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--color-black);
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in;
 }
 
 .footer-info a:hover {
-    text-decoration: underline;
+    font-weight: 500;
     color: #4a4a4a;
 }
 
@@ -438,11 +515,12 @@ footer {
     line-height: 1.4;
     text-decoration: none;
     color: var(--color-light);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in;
 }
 
 .contact-item a:hover {
-    text-decoration: underline;
+    letter-spacing: 0.5px;
+    font-weight: 600;
 }
 
 .icon-box {
@@ -455,7 +533,7 @@ footer {
     background-color: var(--color-light);
     margin-right: 24px;
     color: var(--color-black);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in;
 }
 
 .icon-box:hover {
@@ -480,7 +558,7 @@ input, textarea {
     padding: 10px 20px;
     border-radius: 29px;
     width: 100%;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in;
 }
 
 input:hover, textarea:hover {
@@ -502,7 +580,7 @@ input {
 .textarea {
     height: 174px;
     resize: none;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in;
 }
 
 .note {
@@ -518,29 +596,29 @@ input {
     font-weight: 600;
     padding: 20px 40px 16px 40px;
     color: var(--color-black);
-    background-color: #9ACD32;
+    background-color: var(--color-accent-second);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     text-decoration: none;
     gap: 14px;
     white-space: nowrap; /* Запобігає переносу тексту */
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in;
 }
 
 button {
     width: fit-content;
 }
 
-.submit-btn:hover, .btn:active {
+.submit-btn:hover, .submit-btn:active {
     color: var(--color-light);
-    background-color: #86ba0d;
+    background-color: var(--color-accent-second-hover);
     transform: scale(1.05);
 }
 
 .submit-btn:hover .icon, .submit-btn:active .icon {
   filter: brightness(0) invert(1);
-  transition: all 0.4s ease;
+  transform: scale(1.05);
 }
 
 /* Загальні стилі */
@@ -746,7 +824,7 @@ button {
     border-radius: 24px;
     min-width: 280px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in;
 }
 
 .icon-text {
@@ -962,14 +1040,14 @@ button {
 
 .clients-grid a {
     display: inline-block;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in;
 }
 
 .clients-grid img {
     max-width: 272px;
     height: auto;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in;
 }
 
 .clients-grid a:hover img {
@@ -1006,7 +1084,7 @@ button {
     position: relative;
     border-radius: 24px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in;
 }
 
 .experience-block:hover {
@@ -1039,7 +1117,7 @@ button {
 
 .experience-block .date-work {
     margin-top: 16px;
-    color:var(--color-dark-grey);
+    color: var(--color-dark-grey);
     padding-right: 16px;
 }
 
@@ -1051,7 +1129,7 @@ button {
     align-items: center; 
     justify-content: center; 
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in;
     border-radius: 16px;
     flex-shrink: 0; /* Запобігає зменшенню кнопки */
 }
@@ -1068,7 +1146,7 @@ button {
 
 .icon-button:hover img {
     filter: brightness(0) invert(1);
-    transition: all 0.4s ease;
+    transition: all 0.4s ease-in;
 }
 
 .gallery {
@@ -1097,7 +1175,7 @@ button {
     width: 100%;
     height: auto;
     object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease-in, box-shadow 0.3s ease-in;
     border-radius: 24px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
@@ -1108,6 +1186,7 @@ button {
 }
 
 .hobbies {
+    margin-top: 114px;
     margin-bottom: 114px;
     text-align: center;
     padding: 0 10px;
@@ -1215,7 +1294,7 @@ button {
     max-width: 1280px;
     width: 100%;
     box-sizing: border-box;
-    transition: width 0.3s ease;
+    transition: width 0.3s ease-in;
 }
 .tools-row {
     display: flex;
@@ -1248,7 +1327,7 @@ button {
   flex: 1;
   text-align: center;
   padding: 16px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-in;
 }
 
 .tool:hover {
@@ -1270,7 +1349,7 @@ button {
     max-width: 1280px;
     width: 100%;
     box-sizing: border-box;
-    transition: width 0.3s ease;
+    transition: width 0.3s ease-in;
 }
 
 /* Рядок із зонами */
@@ -1292,7 +1371,7 @@ button {
   flex: 1;
   text-align: center;
   padding: 16px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-in;
 }
 
 .area:hover {
@@ -1336,7 +1415,7 @@ button {
   align-items: center;
   z-index: 1000;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in;
 }
 
 #scrollToTopButton img {
@@ -1352,7 +1431,7 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 
 /* Коли на кнопці наведено курсор */
 #scrollToTopButton:hover, #scrollToTopButton:active  {
-  background-color: #86ba0d;
+  background-color: var(--color-accent-first-hover);
   transform: scale(1.05);
 }
 
@@ -1404,7 +1483,7 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 }
 
 @media (max-width: 1280px) {
-    .header-nav ul {
+    .static-content ul {
         gap: 46px;
     }
 
@@ -1433,8 +1512,8 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 }
 
 @media (max-width: 1100px) {
-    .header-nav ul {
-        gap: 32px;
+    .static-content ul {
+        gap: 30px;
     }
 
     .hero-content {
@@ -1492,9 +1571,49 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 
 
 @media (max-width: 1024px) {
-    .header-nav ul {
-        display: none; 
-        gap: 30px;
+    .static-content ul {
+        display: none;
+    }
+
+    .dropdown:hover .drop-btn {
+        padding:6px 0px 0px 0px;
+    }
+
+    .dropdown-content a:hover {
+        transform: scale(1.05);
+        color: var(--color-accent-second-hover);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--color-light);
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: var(--color-black);
+        padding: 16px 20px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .dropdown-content li {
+        list-style: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
     }
 
     .hero-text {
@@ -1740,13 +1859,13 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
     
     .btn_header {
         font-size: 0.78rem; 
-        padding: 12px 24px 10px 24px; 
+        padding: 12px 26px 10px 26px; 
     }
 
-    .logo img{
+    .drop-btn img {
         flex-grow: 1; /* Логотип автоматично займе весь доступний простір */
         max-width: calc(100vw - 40px - 16px - 120px);
-    }
+    }    
 
     .experience-journey {
         padding: 40px 12px;
@@ -1800,81 +1919,9 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
     .skill-back li {
         margin-bottom: 8px;
     }
-    .tool h5,
+    .tool h5, 
     .area h5 {
         font-size: 0.8rem;
         hyphens: auto;
     }
-}
-
-
-@keyframes slide-in-up {
-    from {
-        opacity: 0;
-        transform: translateY(100px); /* Початкове положення знизу */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0); /* Кінцеве положення */
-    }
-}
-
-@keyframes slide-in-left {
-    from {
-        opacity: 0;
-        transform: translateX(-100px); /* Початкове положення зліва */
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0); /* Кінцеве положення */
-    }
-}
-
-@keyframes slide-in-right {
-    from {
-        opacity: 0;
-        transform: translateX(100px); /* Початкове положення зліва */
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0); /* Кінцеве положення */
-    }
-}
-
-
-.hero-text h2,
-.hero-text h1,
-.hero-text .btn,
-.about-me-text h3,
-.about-me-text h2,
-.about-me-text p,
-.about-me-text .btn {
-    opacity: 0; /* Сховати до анімації */
-    transform: translateY(100px); /* Початкове положення */
-    animation: slide-in-up 2s ease-in-out 1 forwards; /* Анімація для тексту */
-}
-
-.hero-text h2 {
-    animation-delay: 0s; /* Затримка для першого елемента */
-}
-
-.hero-text h1 {
-    animation-delay: 0.3s; /* Затримка для другого елемента */
-}
-
-.hero-text .btn {
-    animation-delay: 0.6s; /* Затримка для кнопки */
-}
-
-.about-me-text h3 {
-    animation-delay: 0s;
-}
-.about-me-text h2 {
-    animation-delay: 0.3s;
-}
-.about-me-text p {
-    animation-delay: 0.6s;
-}
-.about-me-text .btn {
-    animation-delay: 0.9s;
 }
