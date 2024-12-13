@@ -213,7 +213,7 @@ p {
 
 
 .btn:hover, .btn:active {
-    transform: scale(1.05);
+    transform: scale(1.02);
     color: var(--color-light);
     background-color: var(--color-accent-first-hover);
     text-decoration: none;
@@ -613,12 +613,12 @@ button {
 .submit-btn:hover, .submit-btn:active {
     color: var(--color-light);
     background-color: var(--color-accent-second-hover);
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .submit-btn:hover .icon, .submit-btn:active .icon {
   filter: brightness(0) invert(1);
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 /* Загальні стилі */
