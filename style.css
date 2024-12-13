@@ -314,7 +314,6 @@ p {
     background-color: var(--color-accent-second-hover); 
     color: var(--color-light);
     text-decoration: none;
-    transform: scale(1.005);
 }
 
 footer {
