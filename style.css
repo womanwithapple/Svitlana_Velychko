@@ -213,7 +213,6 @@ p {
 
 
 .btn:hover, .btn:active {
-    transform: scale(1.05);
     color: var(--color-light);
     background-color: var(--color-accent-first-hover);
     text-decoration: none;
@@ -243,6 +242,15 @@ p {
     margin: 0 auto;
     padding: 0 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 100%;
+    max-height: 120px;
+    object-fit: cover;
+    width: auto;
+    cursor: pointer; /* Зміна курсора для натискання */
 }
 
 .header-nav {
@@ -252,6 +260,7 @@ p {
     width: 100%;
     overflow: hidden;
 }
+
 .static-content ul {
     display: flex;
     list-style: none;
@@ -274,22 +283,6 @@ p {
 }
 
 .dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .drop-btn {
-  border: none;
-  outline: none;
-  color: var(--color-light);
-  padding: 14px 0px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-.dropdown-content {
     display: none;
 }
 
@@ -314,7 +307,6 @@ p {
     background-color: var(--color-accent-second-hover); 
     color: var(--color-light);
     text-decoration: none;
-    transform: scale(1.01);
 }
 
 footer {
@@ -613,12 +605,10 @@ button {
 .submit-btn:hover, .submit-btn:active {
     color: var(--color-light);
     background-color: var(--color-accent-second-hover);
-    transform: scale(1.05);
 }
 
 .submit-btn:hover .icon, .submit-btn:active .icon {
   filter: brightness(0) invert(1);
-  transform: scale(1.05);
 }
 
 /* Загальні стилі */
@@ -1494,6 +1484,10 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 }
 
 @media (min-width: 1280px) {
+    .static-content ul {
+        gap: 46px;
+    }
+
     .experience-journey .decorative-top-left,
     .experience-journey .decorative-bottom-right {
         height: 75px; 
@@ -1571,19 +1565,20 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 
 
 @media (max-width: 1024px) {
+   .header-nav {
+        display: flex;
+        align-items: center;
+        gap: 32px; /* Відступ між меню та логотипом */
+    }
+
     .static-content ul {
         display: none;
     }
 
-    .dropdown:hover .drop-btn {
-        padding:6px 0px 0px 0px;
-    }
-
-    .dropdown-content a:hover {
-        transform: scale(1.05);
-        color: var(--color-accent-second-hover);
-        font-weight: 600;
-        letter-spacing: 0.5px;
+    .dropdown {
+        display: flex;
+        float: left;
+        overflow: hidden;
     }
 
     .dropdown-content {
@@ -1593,12 +1588,34 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
         min-width: 160px;
         width: 320px;
         z-index: 1;
+        transform: translateY(62px) translateX(-20px);
+    }
+
+    .dropdown .drop-btn {
+        border: none;
+        outline: none;
+        padding: 14px 0px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .drop-btn img {
+        height: 28px;
+    }
+    
+    .dropdown-content a:hover {
+        transform: scale(1.05);
+        color: var(--color-accent-second-hover);
+        font-weight: 600;
+        letter-spacing: 0.5px;
     }
 
     .dropdown-content a {
         float: none;
         color: var(--color-black);
-        padding: 16px 24px;
+        margin: 16px 24px;
         text-decoration: none;
         display: flex;
         align-items: center;
@@ -1610,11 +1627,15 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
         transition: all 0.3s ease-in-out;
     }
 
+    .dropdown-content a.btn-in-drop {
+        display:none;
+    }
+
     .dropdown-content li {
         list-style: none;
     }
 
-    .dropdown:hover .dropdown-content {
+    .dropdown:hover .dropdown-content, .dropdown:active .dropdown-content {
         display: block;
     }
 
@@ -1624,12 +1645,12 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
         filter: brightness(0) saturate(100%); /* Початковий чорний */
         transition: filter 0.4s ease-in-out;
     }
-
+    
     .header-line {
-    width: 280px;
-    height: 1px;
-    background-color: var(--color-black);
-    margin: 0 20px;
+        width: 280px;
+        height: 1px;
+        background-color: var(--color-black);
+        margin: 0 20px;
     }
 
     .hero-text {
@@ -1855,6 +1876,36 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 }
 
 @media (max-width: 600px) {
+    .btn_header {
+        display: none;
+    }
+
+    .dropdown-content a.btn-in-drop {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 14px 32px 12px 32px;
+        background-color: var(--color-accent-second);
+        color: var(--color-black);
+        font-size: 0.88rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        text-decoration: none;
+        white-space: nowrap;
+        gap: 14px;
+        transition: all 0.3s ease-in;
+        max-width: fit-content;
+        width: auto;
+    }
+
+    .dropdown-content a.btn-in-drop:hover, .dropdown-content a.btn-in-drop:active {
+        background-color: var(--color-accent-second-hover);
+        color: var(--color-light);
+        text-decoration: none;
+    }
+
     .icon-decor {
         display: none;
     }
@@ -1869,19 +1920,9 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
 }
 
 @media (max-width: 480px) {
-    #header {
-        justify-content: space-between;
-    }
-    
-    .btn_header {
-        font-size: 0.78rem; 
-        padding: 12px 26px 10px 26px; 
-    }
-
-    .drop-btn img {
-        flex-grow: 1; /* Логотип автоматично займе весь доступний простір */
-        max-width: calc(100vw - 40px - 16px - 120px);
-    }    
+    .logo img {
+        width: 86%;
+    } 
 
     .experience-journey {
         padding: 40px 12px;
@@ -1941,4 +1982,3 @@ body:not(:root):has(:not(:root)) #scrollToTopButton {
         hyphens: auto;
     }
 }
-
